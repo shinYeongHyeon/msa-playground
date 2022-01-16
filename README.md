@@ -297,6 +297,8 @@ MSA 에 맞게 시스템을 여러 서비스로 분해하는, 정확한 알고�
 느슨한 결합은 서비스간이 아니라 서비스 안에서도 유지되어야 함.  
 예를 들어, 함수로 들어온 파라미터는 **절대** 변경하지 않는 것
 ```javascript
+const newParams = neverChange(originalPrams);
+
 function neverChange(param) {
     const newParam = {
         ...param,
